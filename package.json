@@ -1,0 +1,31 @@
+{
+  "name": "seneca-level-store",
+  "version": "0.1.0",
+  "description": "Seneca leveldb store",
+  "main": "lib/level-store.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/rjrodger/seneca-level-store.git"
+  },
+  "keywords": [
+    "seneca",
+    "leveldb",
+    "store",
+    "plugin"
+  ],
+  "author": "Richard Rodger (http://richardrodger.com)",
+  "license": "MIT",
+  "dependencies": {
+    "levelup": "~0.6.2",
+    "underscore": "~1.4.4",
+    "node-uuid": "~1.4.0"
+  },
+  "files":[
+    "README.md",
+    "LICENSE.txt",
+    "lib/level-store.js"
+  ]
+}
