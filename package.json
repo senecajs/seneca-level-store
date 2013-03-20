@@ -1,6 +1,6 @@
 {
   "name": "seneca-level-store",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Seneca leveldb store",
   "main": "lib/level-store.js",
   "scripts": {
