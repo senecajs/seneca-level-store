@@ -1,6 +1,9 @@
 /* Copyright (c) 2013 Richard Rodger, MIT License */
 "use strict";
 
+var tmpdir = require('osenv').tmpdir
+var dir = tmpdir() + '/test-seneca-level-store'
+require('mkdirp').sync(dir)
 
 var assert = require('assert')
 
@@ -15,7 +18,7 @@ var shared = seneca.test.store.shared
 
 var si = seneca()
 si.use(require('..'),{
-  folder:'db'
+  folder:dir
 })
 
 si.__testcount = 0
