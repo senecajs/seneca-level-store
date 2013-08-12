@@ -21,7 +21,9 @@
   "dependencies": {
     "underscore": "~1.4.4",
     "node-uuid": "~1.4.0",
-    "level": "~0.12.0"
+    "level": "~0.12.0",
+    "jsonquery-engine": "git://github.com/dominictarr/jsonquery-engine.git#805d8c0637b9c0169fd1d4a2fdd06b680f03e35c",
+    "level-queryengine": "~0.1.1"
   },
   "files": [
     "README.md",
@@ -32,6 +34,7 @@
     "seneca": "~0.5.9",
     "mkdirp": "~0.3.5",
     "osenv": "0.0.3",
-    "mocha": "~1.12.0"
+    "mocha": "~1.12.0",
+    "tape": "~1.0.4"
   }
 }
