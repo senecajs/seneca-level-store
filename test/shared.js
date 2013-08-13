@@ -2,7 +2,7 @@
 var tape = require('tape')
 
 var eyes    = require('eyes')
-var async   = require('async')
+//var async   = require('async')
 var _       = require('underscore')
 var gex     = require('gex')
 
