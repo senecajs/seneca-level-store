@@ -1,6 +1,6 @@
 {
   "name": "seneca-level-store",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Seneca leveldb store",
   "main": "lib/level-store.js",
   "scripts": {
@@ -33,7 +33,7 @@
     "lib/level-store.js"
   ],
   "devDependencies": {
-    "seneca": "~0.5.9",
+    "seneca": "~0.5.10",
     "mkdirp": "~0.3.5",
     "osenv": "0.0.3",
     "mocha": "~1.12.0",
