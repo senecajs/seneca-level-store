@@ -68,8 +68,8 @@ module.exports = function (si) {
 
   tape('setup', function(assert) {
 
-  console.log(assert.__proto__)
-  assert.__proto__.isNotNull = assert.__proto__.ok
+    //console.log(assert.__proto__)
+    assert.__proto__.isNotNull = assert.__proto__.ok
 
 
   si.ready(function(){
