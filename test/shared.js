@@ -1,9 +1,7 @@
 "use strict";
 var tape = require('tape')
 
-var eyes    = require('eyes')
-//var async   = require('async')
-var _       = require('underscore')
+var _       = require('lodash')
 var gex     = require('gex')
 
 
@@ -242,70 +240,4 @@ module.exports = function (si) {
 }
 
 module.exports(si)
-
-//exports.sqltest = function(si,done) {
-//  si.ready(function(){
-//    assert.isNotNull(si)
-//
-//    var Product = si.make('product')
-//    var products = []
-//
-//    async.series(
-//      {
-//        setup: function(cb) {
-//
-//          products.push( Product.make$({name:'apple',price:100}) )
-//          products.push( Product.make$({name:'pear',price:200}) )
-//
-//          var i = 0
-//          function saveproduct(){
-//            return function(cb) {
-//              products[i].save$(cb)
-//              i++
-//            }
-//          }
-//
-//          async.series([
-//            saveproduct(),
-//            saveproduct(),
-//          ],cb)
-//        },
-//
-//
-//        query_string: function( cb ) {
-//          Product.list$("SELECT * FROM product ORDER BY price",function(err,list){
-//            var s = _.map(list,function(p){return p.toString()}).toString()
-//            assert.ok( 
-//              gex("//product:{id=*;name=apple;price=100},//product:{id=*;name=pear;price=200}").on( s ) )
-//            cb()
-//          })
-//        },
-//
-//        query_params: function( cb ) {
-//          Product.list$(["SELECT * FROM product WHERE price >= ? AND price <= ?",0,1000],function(err,list){
-//            var s = _.map(list,function(p){return p.toString()}).toString()
-//            assert.ok( 
-//              gex("//product:{id=*;name=apple;price=100},//product:{id=*;name=pear;price=200}").on( s ) )
-//            cb()
-//          })
-//        },
-//
-//        teardown: function(cb) {
-//          products.forEach(function(p){
-//            p.remove$()
-//          })
-//          cb()
-//        }
-//      },
-//      function(err,out){
-//        if( err ) {
-//          eyes.inspect( err )
-//        }
-//        si.__testcount++
-//        assert.isNull(err)
-//        done && done()
-//      }
-//    )
-//  })
-//}
 
