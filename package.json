@@ -6,7 +6,8 @@
   "license": "MIT",
   "author": "Richard Rodger (http://richardrodger.com)",
   "contributors": [
-    "Dean McDonnell (http://mcdonnelldean.me)"
+    "Dean McDonnell (http://mcdonnelldean.me)",
+    "Marco Piraccini (https://github.com/marcopiraccini)" 
   ],
   "scripts": {
     "test": "lab test/*.test.js -r console -v"
