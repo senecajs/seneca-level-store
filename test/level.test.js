@@ -1,54 +1,35 @@
 /* Copyright (c) 2013 Richard Rodger, MIT License */
+
 "use strict";
 
-/*
-var tmpdir = require('osenv').tmpdir
-var dir = tmpdir() + '/test-seneca-level-store'
-require('mkdirp').sync(dir)
-*/
+var Seneca = require('seneca');
+var Lab = require('lab');
+var CommonTests = require('seneca-store-test');
 
-var assert = require('assert')
+var lab = exports.lab = Lab.script();
+var describe = lab.describe;
+var it = lab.it;
 
+var tmpdir = require('osenv').tmpdir;
+var dir = tmpdir() + '/test-seneca-level-store';
+require('mkdirp').sync(dir);
 
-var seneca = require('seneca')
-
-
-
-var shared = seneca.test.store.shared
-
-
-
-var si = seneca()
-si.use(require('..'),{
-  folder:'./db'
+var seneca = Seneca({ log: 'silent' });
+seneca.use(require('..'), {
+  folder: dir
 })
 
-si.__testcount = 0
-var testcount = 0
+var testcount = 0;
+seneca.__testcount = 0;
 
+describe('leveldb Store', function () {
 
-describe('level', function(){
-  it('basic', function(done){
-    testcount++
-    shared.basictest(si,done)
+  it('Common Tests', function (done) {
+    testcount++;
+    CommonTests.basictest(seneca, done);
   })
 
-
-  it('extra', function(done){
-    testcount++
-    extratest(si,done)
-  })
-
-
-  it('close', function(done){
-    shared.closetest(si,testcount,done)
+  it('Common Tests Completed', function (done) {
+    CommonTests.closetest(seneca, testcount, done);
   })
 })
-
-
-
-function extratest(si,done) {
-  console.log('EXTRA')
-  si.__testcount++
-  done()
-}
