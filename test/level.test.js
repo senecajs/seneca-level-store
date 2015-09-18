@@ -1,54 +1,50 @@
 /* Copyright (c) 2013 Richard Rodger, MIT License */
+
+/*jslint node: true */
+
 "use strict";
 
-/*
-var tmpdir = require('osenv').tmpdir
-var dir = tmpdir() + '/test-seneca-level-store'
-require('mkdirp').sync(dir)
-*/
+var _ = require('lodash');
+var seneca = require('seneca');
+var shared = require('seneca-store-test');
+var fs = require('fs');
 
-var assert = require('assert')
+var Lab = require('lab');
+var lab = exports.lab = Lab.script();
 
+var describe = lab.describe;
+var it = lab.it;
 
-var seneca = require('seneca')
-
-
-
-var shared = seneca.test.store.shared
-
-
-
-var si = seneca()
-si.use(require('..'),{
-  folder:'./db'
-})
-
-si.__testcount = 0
-var testcount = 0
+var tmpdir = require('osenv').tmpdir;
+var dir = tmpdir() + '/test-seneca-level-store';
+require('mkdirp').sync(dir);
 
 
-describe('level', function(){
-  it('basic', function(done){
-    testcount++
-    shared.basictest(si,done)
-  })
+var incrementConfig = _.assign({
+  map: { '-/-/incremental': '*' },
+  auto_increment: true
+});
 
+var si = seneca();
+si.use(require('..'), {folder: dir });
+si.use(require('..'), incrementConfig);
 
-  it('extra', function(done){
-    testcount++
-    extratest(si,done)
-  })
+describe('Level Test', function () {
 
+   shared.basictest({
+    seneca: si,
+    script: lab
+  });
 
-  it('close', function(done){
-    shared.closetest(si,testcount,done)
-  })
-})
+  // Not sure these should be supported by Level
+  // shared.sorttest({
+  //   seneca: si,
+  //   script: lab
+  // });
+  //
+  // shared.limitstest({
+  //   seneca: si,
+  //   script: lab
+  // });
 
-
-
-function extratest(si,done) {
-  console.log('EXTRA')
-  si.__testcount++
-  done()
-}
+});
