@@ -36,15 +36,14 @@ describe('Level Test', function () {
     script: lab
   });
 
-  // Not sure these should be supported by Level
-  // shared.sorttest({
-  //   seneca: si,
-  //   script: lab
-  // });
-  //
-  // shared.limitstest({
-  //   seneca: si,
-  //   script: lab
-  // });
+  shared.sorttest({
+    seneca: si,
+    script: lab
+  });
+  
+  shared.limitstest({
+    seneca: si,
+    script: lab
+  });
 
 });
