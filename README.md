@@ -73,7 +73,7 @@ The standard Seneca query format is supported:
    * `entity.list$({f1:v1,...},{skip$:5})` means skip the first 5
    * `entity.list$({f1:v1,...},{fields$:['field1','field2']})` means only return the listed fields (avoids pulling lots of data out of the database)
    * you can use sort$, limit$, skip$ and fields$ together
-   * `entity.list$({f1:v1,...},{native$:[{-level-query-},{-level-options-}]})` allows you to specify a native level query, as per [node-leveldb-native](http://leveldb.github.com/node-leveldb-native/markdown-docs/queries.html) 
+   * `entity.list$({f1:v1,...},{native$:[{-level-query-},{-level-options-}]})` allows you to specify a native level query, as per [node-leveldb-native](http://leveldb.github.com/node-leveldb-native/markdown-docs/queries.html)
 
 
 ### Native Driver
@@ -84,6 +84,5 @@ As with all seneca stores, you can access the native driver, in this case, the `
 ## Test
 
 ```bash
-cd test
-mocha level.test.js --seneca.log.print
+npm test
 ```
