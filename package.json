@@ -2,7 +2,7 @@
   "name": "seneca-level-store",
   "version": "0.2.2",
   "description": "Seneca leveldb store",
-  "main": "lib/level-store.js",
+  "main": "level-store.js",
   "license": "MIT",
   "author": "Richard Rodger (http://richardrodger.com)",
   "contributors": [
