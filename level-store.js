@@ -148,7 +148,7 @@ module.exports = function(opts) {
     var store = {
         name: name,
 
-        close: function(done) {
+        close: function(args, done) {
             // Closes all the dbs
             seneca.util.recurse(_.values(dbmap), function(db, next) {
                 db.close(next);
