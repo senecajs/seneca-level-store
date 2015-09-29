@@ -1,15 +1,28 @@
-# seneca-level-store
+# seneca-level-store - a [Seneca](http://senecajs.org) plugin
 
-> A [Seneca.js][] data storage plugin
 
-[![travis][travis-badge]][travis-url]
-[![npm][npm-badge]][npm-url]
+### Seneca leveldb entity store plugin.
 
-This module is a plugin for [Seneca.js][]. It provides a storage engine that uses
-levelDb to persist data and is ready for production use. It may also be used as
-an example on how to implement a storage plugin for Seneca.
+A storage engine that uses [leveldb](http://leveldb.org/) to persist
+data. It may also be used as an example on how to implement a storage
+plugin for Seneca using an underlying key-value store.
 
-For a gentle introduction to Seneca itself, see the [senecajs.org][seneca.js] site.
+
+### Support
+
+Current Version: 0.2.3
+
+Tested on: [Seneca](//github.com/rjrodger/seneca) 0.6.5
+
+[![Build Status](https://travis-ci.org/rjrodger/seneca-level-store.png?branch=master)](https://travis-ci.org/rjrodger/seneca-level-store)
+
+If you're using this module, and need help, you can:
+
+   * Post a [github issue](//github.com/rjrodger/seneca-level-store/issues),
+   * Tweet to [@senecajs](http://twitter.com/senecajs),
+   * Ask on the [![Gitter chat](https://badges.gitter.im/rjrodger/seneca-level-store.png)](https://gitter.im/rjrodger/seneca-level-store).
+
+
 
 ## Install
 To install, simply use npm. Remember you will need to install [Seneca.js][]

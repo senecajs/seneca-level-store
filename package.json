@@ -1,6 +1,6 @@
 {
   "name": "seneca-level-store",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "description": "Seneca leveldb store",
   "main": "level-store.js",
   "license": "MIT",
