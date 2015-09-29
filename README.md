@@ -1,5 +1,7 @@
 # seneca-level-store - a [Seneca](http://senecajs.org) plugin
 
+[![Join the chat at https://gitter.im/rjrodger/seneca-level-store](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/rjrodger/seneca-level-store?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 
 ### Seneca leveldb entity store plugin.
 
