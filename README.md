@@ -94,7 +94,7 @@ The [Senecajs org][] encourage open participation. If you feel you can help in a
 documentation, examples, extra testing, or new features please get in touch.
 
 ## License
-Copyright Richard Rodger 2015, Licensed under [MIT][].
+Copyright Richard Rodger and other contributors 2015, Licensed under [MIT][].
 
 [travis-badge]: https://travis-ci.org/rjrodger/seneca-level-store.png?branch=master
 [travis-url]: https://travis-ci.org/rjrodger/seneca-level-store
