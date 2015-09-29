@@ -1,34 +1,28 @@
-# seneca-level-store - a [Seneca](http://senecajs.org) plugin
+![Seneca](http://senecajs.surge.sh/files/assets/seneca-banner.png)
+> A [Seneca.js][] data storage plugin
 
-[![Join the chat at https://gitter.im/rjrodger/seneca-level-store](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/rjrodger/seneca-level-store?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+# seneca-level-store
+[![Build Status][travis-badge]][travis-url]
+[![Gitter][gitter-badge]][gitter-url]
 
+A storage engine that uses [leveldb][] to persist data. It may also be used as an example on how to
+implement a storage plugin for Seneca using an underlying key-value store.
 
-### Seneca leveldb entity store plugin.
-
-A storage engine that uses [leveldb](http://leveldb.org/) to persist
-data. It may also be used as an example on how to implement a storage
-plugin for Seneca using an underlying key-value store.
-
-
-### Support
-
-Current Version: 0.2.3
-
-Tested on: [Seneca](//github.com/rjrodger/seneca) 0.6.5
-
-[![Build Status](https://travis-ci.org/rjrodger/seneca-level-store.png?branch=master)](https://travis-ci.org/rjrodger/seneca-level-store)
+- __Version:__ 0.2.3
+- __Tested on:__ Seneca 0.6.5
 
 If you're using this module, and need help, you can:
 
-   * Post a [github issue](//github.com/rjrodger/seneca-level-store/issues),
-   * Tweet to [@senecajs](http://twitter.com/senecajs),
-   * Ask on the [![Gitter chat](https://badges.gitter.im/rjrodger/seneca-level-store.png)](https://gitter.im/rjrodger/seneca-level-store).
+- Post a [github issue][],
+- Tweet to [@senecajs][],
+- Ask on the [Gitter][gitter-url].
 
+If you are new to Seneca in general, please take a look at [senecajs.org][]. We have everything from
+tutorials to sample apps to help get you up and running quickly.
 
 
 ## Install
-To install, simply use npm. Remember you will need to install [Seneca.js][]
-seperately.
+To install, simply use npm. Remember you will need to install [Seneca.js][] if you haven't already.
 
 ```
 npm install seneca
@@ -96,17 +90,22 @@ As with all seneca stores, you can access the native driver, in this case, the `
 object using `entity.native$(function (err, db) {...})`.
 
 ## Contributing
-We encourage participation. If you feel you can help in any way, be it with
-examples, extra testing, or new features please get in touch.
+The [Senecajs org][] encourage open participation. If you feel you can help in any way, be it with
+documentation, examples, extra testing, or new features please get in touch.
 
 ## License
 Copyright Richard Rodger 2015, Licensed under [MIT][].
 
-[travis-badge]: https://img.shields.io/travis/rjrodger/seneca-level-store.svg?style=flat-square
+[travis-badge]: https://travis-ci.org/rjrodger/seneca-level-store.png?branch=master
 [travis-url]: https://travis-ci.org/rjrodger/seneca-level-store
-[npm-badge]: https://img.shields.io/npm/v/seneca-level-store.svg?style=flat-square
-[npm-url]: https://npmjs.org/package/seneca-level-store
+[gitter-badge]: https://badges.gitter.im/Join%20Chat.svg
+[gitter-url]: https://gitter.im/rjrodger/seneca-level-store?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge
 
 [MIT]: ./LICENSE
+[Senecajs org]: https://github.com/senecajs/
 [Seneca.js]: https://www.npmjs.com/package/seneca
+[senecajs.org]: http://senecajs.org/
+[leveldb]: http://leveldb.org/
 [node-leveldb-native]: http://leveldb.github.com/node-leveldb-native/markdown-docs/queries.html
+[github issue]: https://github.com/rjrodger/seneca-level-store/issues
+[@senecajs]: http://twitter.com/senecajs
