@@ -2,7 +2,7 @@
   "name": "seneca-level-store",
   "version": "0.2.3",
   "description": "Seneca leveldb store",
-  "main": "level-store.js",
+  "main": "lib/index.js",
   "license": "MIT",
   "author": "Richard Rodger (http://richardrodger.com)",
   "contributors": [
@@ -30,7 +30,7 @@
     "node-uuid": "^1.4.3"
   },
   "devDependencies": {
-    "lab": "^5.17.0",
+    "lab": "^6.0.0",
     "mkdirp": "^0.5.1",
     "osenv": "^0.1.3",
     "seneca": "^0.6.5",

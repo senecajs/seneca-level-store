@@ -2,48 +2,46 @@
 
 /*jslint node: true */
 
-"use strict";
+'use strict'
 
-var _ = require('lodash');
-var seneca = require('seneca');
-var shared = require('seneca-store-test');
-var fs = require('fs');
+var _ = require('lodash')
+var Lab = require('lab')
+var Mkdirp = require('mkdirp')
+var OsEnv = require('osenv')
+var Seneca = require('seneca')
+var Shared = require('seneca-store-test')
 
-var Lab = require('lab');
-var lab = exports.lab = Lab.script();
+var LevelStore = require('..')
 
-var describe = lab.describe;
-var it = lab.it;
-
-var tmpdir = require('osenv').tmpdir;
-var dir = tmpdir() + '/test-seneca-level-store';
-require('mkdirp').sync(dir);
-
+// Shortcuts
+var lab = exports.lab = Lab.script()
+var describe = lab.describe
+var it = lab.it
+var dir = OsEnv.tmpdir() + '/test-seneca-level-store'
+Mkdirp.sync(dir)
 
 var incrementConfig = _.assign({
   map: { '-/-/incremental': '*' },
   auto_increment: true
-});
+})
 
-var si = seneca();
-si.use(require('..'), {folder: dir });
-si.use(require('..'), incrementConfig);
+var si = Seneca()
+si.use(LevelStore, { folder: dir })
+si.use(LevelStore, incrementConfig)
 
 describe('Level Test', function () {
-
-   shared.basictest({
+  Shared.basictest({
     seneca: si,
     script: lab
-  });
+  })
 
-  shared.sorttest({
+  Shared.sorttest({
     seneca: si,
     script: lab
-  });
-  
-  shared.limitstest({
+  })
+
+  Shared.limitstest({
     seneca: si,
     script: lab
-  });
-
-});
+  })
+})
