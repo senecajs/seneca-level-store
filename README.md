@@ -97,8 +97,8 @@ documentation, examples, extra testing, or new features please get in touch.
 ## License
 Copyright Richard Rodger and other contributors 2015, Licensed under [MIT][].
 
-[travis-badge]: https://travis-ci.org/rjrodger/seneca-level-store.png?branch=master
-[travis-url]: https://travis-ci.org/rjrodger/seneca-level-store
+[travis-badge]: https://travis-ci.org/senecajs/seneca-level-store.svg
+[travis-url]: https://travis-ci.org/senecajs/seneca-level-store
 [gitter-badge]: https://badges.gitter.im/Join%20Chat.svg
 [gitter-url]: https://gitter.im/senecajs/seneca
 [standard-badge]: https://raw.githubusercontent.com/feross/standard/master/badge.png
