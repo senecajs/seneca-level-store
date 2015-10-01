@@ -1,4 +1,4 @@
-![Seneca](http://senecajs.surge.sh/files/assets/seneca-banner.png)
+![Seneca](http://senecajs.surge.sh/files/assets/seneca-logo.png)
 > A [Seneca.js][] data storage plugin
 
 # seneca-level-store
