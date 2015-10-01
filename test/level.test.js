@@ -1,6 +1,6 @@
 /* Copyright (c) 2013 Richard Rodger, MIT License */
 
-/*jslint node: true */
+/* jslint node: true */
 
 'use strict'
 
@@ -16,7 +16,6 @@ var LevelStore = require('..')
 // Shortcuts
 var lab = exports.lab = Lab.script()
 var describe = lab.describe
-var it = lab.it
 var dir = OsEnv.tmpdir() + '/test-seneca-level-store'
 Mkdirp.sync(dir)
 
