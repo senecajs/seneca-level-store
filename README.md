@@ -4,6 +4,7 @@
 # seneca-level-store
 [![Build Status][travis-badge]][travis-url]
 [![Gitter][gitter-badge]][gitter-url]
+
 [![js-standard-style][standard-badge]][standard-style]
 
 A storage engine that uses [leveldb][] to persist data. It may also be used as an example on how to
