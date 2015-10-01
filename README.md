@@ -99,7 +99,7 @@ Copyright Richard Rodger and other contributors 2015, Licensed under [MIT][].
 [travis-badge]: https://travis-ci.org/rjrodger/seneca-level-store.png?branch=master
 [travis-url]: https://travis-ci.org/rjrodger/seneca-level-store
 [gitter-badge]: https://badges.gitter.im/Join%20Chat.svg
-[gitter-url]: https://gitter.im/rjrodger/seneca-level-store?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge
+[gitter-url]: https://gitter.im/senecajs/seneca
 
 [MIT]: ./LICENSE
 [Senecajs org]: https://github.com/senecajs/
