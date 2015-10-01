@@ -4,6 +4,7 @@
 # seneca-level-store
 [![Build Status][travis-badge]][travis-url]
 [![Gitter][gitter-badge]][gitter-url]
+[![js-standard-style][standard-badge]][standard-style]
 
 A storage engine that uses [leveldb][] to persist data. It may also be used as an example on how to
 implement a storage plugin for Seneca using an underlying key-value store.
@@ -100,6 +101,8 @@ Copyright Richard Rodger and other contributors 2015, Licensed under [MIT][].
 [travis-url]: https://travis-ci.org/rjrodger/seneca-level-store
 [gitter-badge]: https://badges.gitter.im/Join%20Chat.svg
 [gitter-url]: https://gitter.im/senecajs/seneca
+[standard-badge]: https://raw.githubusercontent.com/feross/standard/master/badge.png
+[standard-style]: https://github.com/feross/standard
 
 [MIT]: ./LICENSE
 [Senecajs org]: https://github.com/senecajs/

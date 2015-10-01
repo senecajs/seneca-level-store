@@ -10,7 +10,7 @@
     "Marco Piraccini (https://github.com/marcopiraccini)"
   ],
   "scripts": {
-    "test": "lab test/*.test.js -r console -v"
+    "test": "lab test/*.test.js -r console -v -L"
   },
   "repository": {
     "type": "git",
@@ -30,6 +30,8 @@
     "node-uuid": "^1.4.3"
   },
   "devDependencies": {
+    "eslint-config-standard": "^4.4.0",
+    "eslint-plugin-standard": "^1.3.1",
     "lab": "^6.0.0",
     "mkdirp": "^0.5.1",
     "osenv": "^0.1.3",
