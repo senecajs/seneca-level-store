@@ -12,6 +12,7 @@ implement a storage plugin for Seneca using an underlying key-value store.
 
 - __Version:__ 0.2.3
 - __Tested on:__ Seneca 0.6.5
+- __Node:__ 0.10, 0.11, 0.12, 4
 
 If you're using this module, and need help, you can:
 
