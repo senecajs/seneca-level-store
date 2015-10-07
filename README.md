@@ -41,18 +41,18 @@ npm run test
 
 ## Quick Example
 
-``` js
+```js
 var seneca = require('seneca')()
 seneca.use('level-store', {
   folder: 'db'
 })
 
-seneca.ready(function(){
+seneca.ready(function() {
   var apple = seneca.make$('fruit')
-  apple.name  = 'Pink Lady'
+  apple.name = 'Pink Lady'
   apple.price = 0.99
-  apple.save$(function (err,apple) {
-    console.log( "apple.id = " + apple.id  )
+  apple.save$(function (err, apple) {
+    console.log("apple.id = " + apple.id)
   })
 })
 ```
