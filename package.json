@@ -10,7 +10,7 @@
     "Marco Piraccini (https://github.com/marcopiraccini)"
   ],
   "scripts": {
-    "test": "lab test/*.test.js -r console -v -L"
+    "test": "lab test/*.test.js -r console -v -L -m 3000"
   },
   "repository": {
     "type": "git",
