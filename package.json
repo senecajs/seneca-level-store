@@ -12,10 +12,6 @@
   "scripts": {
     "test": "lab test/*.test.js -r console -v -L -m 3000"
   },
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/rjrodger/seneca-level-store.git"
-  },
   "keywords": [
     "seneca",
     "microservices",
@@ -23,6 +19,14 @@
     "store",
     "plugin"
   ],
+  "homepage": "https://github.com/senecajs/seneca-level-store",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/senecajs/seneca-level-store.git"
+  },
+  "bugs": {
+    "url": "https://github.com/senecajs/seneca-level-store/issues"
+  },
   "dependencies": {
     "jsonquery-engine": "^1.0.2",
     "level": "^1.3.0",
