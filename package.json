@@ -2,15 +2,17 @@
   "name": "seneca-level-store",
   "version": "0.2.3",
   "description": "Seneca leveldb store",
-  "main": "lib/index.js",
+  "main": "level-store.js",
   "license": "MIT",
   "author": "Richard Rodger (http://richardrodger.com)",
   "contributors": [
     "Dean McDonnell (http://mcdonnelldean.me)",
-    "Marco Piraccini (https://github.com/marcopiraccini)"
+    "Marco Piraccini (https://github.com/marcopiraccini)",
+    "Cristian Kiss (https://github.com/ckiss)"
   ],
   "scripts": {
-    "test": "lab test/*.test.js -r console -v -L -m 3000"
+    "test": "lab test/*.test.js -r console -v -L -m 3000",
+    "annotate": "docco level-store.js -o doc"
   },
   "keywords": [
     "seneca",
@@ -28,19 +30,23 @@
     "url": "https://github.com/senecajs/seneca-level-store/issues"
   },
   "dependencies": {
-    "jsonquery-engine": "^1.0.2",
-    "level": "^1.3.0",
-    "level-queryengine": "^3.0.1",
-    "lodash": "^3.10.1",
-    "node-uuid": "^1.4.3"
+    "jsonquery-engine": "1.0.2",
+    "level": "1.3.0",
+    "level-queryengine": "3.0.1",
+    "lodash": "3.10.1",
+    "node-uuid": "1.4.3"
   },
   "devDependencies": {
-    "eslint-config-standard": "^4.4.0",
-    "eslint-plugin-standard": "^1.3.1",
-    "lab": "^6.2.0",
-    "mkdirp": "^0.5.1",
-    "osenv": "^0.1.3",
+    "docco": "0.7.0",
+    "lab": "6.2.0",
+    "mkdirp": "0.5.1",
+    "osenv": "0.1.3",
     "seneca": "plugin",
-    "seneca-store-test": "^1.0.0"
-  }
+    "seneca-store-test": "1.0.0"
+  },
+  "files": [
+    "README.md",
+    "LICENSE",
+    "level-store.js"
+  ]
 }

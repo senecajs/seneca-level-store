@@ -44,7 +44,8 @@ module.exports = function (opts) {
       try {
         db = dbmap[folder] = LevelQuery(Levelup(folder, opts))
         db.query.use(JsonqueryEngine())
-      } catch (e) {
+      }
+      catch (e) {
         db = dbmap[folder]
         if (db) {
           return done(null, db)
@@ -158,7 +159,8 @@ module.exports = function (opts) {
               }
             )
           }))
-        } else {
+        }
+        else {
           store.load(args, internals.error(done, function (item) {
             if (!item) {
               return done()
