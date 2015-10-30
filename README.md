@@ -14,6 +14,13 @@ implement a storage plugin for Seneca using an underlying key-value store.
 - __Tested on:__ Seneca 0.7
 - __Node:__ 0.10, 0.12, 4
 
+seneca-level-store's source can be read in an annotated fashion by,
+
+- running `npm run annotate`
+- viewing [online](http://rjrodger.github.io/seneca-level-store/doc/level-store.html).
+
+The annotated source can be found locally at [./doc/level-store.html]().
+
 If you're using this module, and need help, you can:
 
 - Post a [github issue][],
