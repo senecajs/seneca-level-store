@@ -7,7 +7,8 @@
   "author": "Richard Rodger (http://richardrodger.com)",
   "contributors": [
     "Dean McDonnell (http://mcdonnelldean.me)",
-    "Marco Piraccini (https://github.com/marcopiraccini)"
+    "Marco Piraccini (https://github.com/marcopiraccini)",
+    "Cristian Kiss (https://github.com/ckiss)"
   ],
   "scripts": {
     "test": "lab test/*.test.js -r console -v -L -m 3000",

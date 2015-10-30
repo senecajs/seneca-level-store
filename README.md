@@ -13,6 +13,7 @@ implement a storage plugin for Seneca using an underlying key-value store.
 - __Version:__ 0.2.3
 - __Tested on:__ Seneca 0.7
 - __Node:__ 0.10, 0.12, 4
+- __License:__ [MIT][]
 
 seneca-level-store's source can be read in an annotated fashion by,
 
