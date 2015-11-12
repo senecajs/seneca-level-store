@@ -143,7 +143,12 @@ module.exports = function (opts) {
               return done(err)
             }
             seneca.log.debug('remove/one', q, maybefent, desc)
-            done(null, maybefent)
+            if (load) {
+              done(null, maybefent)
+            }
+            else {
+              done()
+            }
           })
         }
         if (all) {
@@ -154,8 +159,18 @@ module.exports = function (opts) {
                 db.del(fent.id, { sync: opts.sync }, next)
               },
               function (err) {
+                if (err) {
+                  return done(err)
+                }
+
                 seneca.log.debug('remove/all', q, desc)
-                done(err)
+
+                if (load) {
+                  done(null, list[0] || undefined)
+                }
+                else {
+                  done()
+                }
               }
             )
           }))
@@ -170,7 +185,12 @@ module.exports = function (opts) {
                 return done(err)
               }
               seneca.log.debug('remove/one', q, item, desc)
-              done(null, item)
+              if (load) {
+                done(null, item)
+              }
+              else {
+                done()
+              }
             })
           }))
         }
@@ -191,10 +211,12 @@ module.exports = function (opts) {
           sort$: q.sort$,
           limit$: q.limit$,
           skip$: q.skip$,
-          fields$: q.fields$
+          fields$: q.fields$,
+          load$: q.load$,// these are from remove action but in some cases (missing id) list is called
+          all$: q.all$// these are from remove action but in some cases (missing id) list is called
         }
         // Remove the optional params from the query
-        q = _.omit(q, ['sort$', 'limit$', 'skip$', 'fields$'])
+        q = _.omit(q, ['sort$', 'limit$', 'skip$', 'fields$', 'load$', 'all$'])
         if (q.all$) { // useless
           q = {}
         }
@@ -211,7 +233,8 @@ module.exports = function (opts) {
             }
             done(err)
           })
-          .on('close', function () {})
+          .on('close', function () {
+          })
           .on('end', function () {
             if (--n) {
               throw new Error('ended:' + n)
