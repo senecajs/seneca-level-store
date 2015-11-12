@@ -94,6 +94,16 @@ The standard Seneca query format is supported:
 
 Note: you can use `sort$`, `limit$`, `skip$` and `fields$` together.
 
+
+## Testing with Docker
+
+With docker installed run the following commands:
+
+```
+docker build -t level-store --no-cache .
+docker run -i  level-store
+```
+
 ### Native Driver
 As with all seneca stores, you can access the native driver, in this case, the `levelup` `db`
 object using `entity.native$(function (err, db) {...})`.
