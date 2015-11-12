@@ -143,10 +143,10 @@ module.exports = function (opts) {
               return done(err)
             }
             seneca.log.debug('remove/one', q, maybefent, desc)
-            if (load){
+            if (load) {
               done(null, maybefent)
             }
-            else{
+            else {
               done()
             }
           })
@@ -165,10 +165,10 @@ module.exports = function (opts) {
 
                 seneca.log.debug('remove/all', q, desc)
 
-                if (load){
+                if (load) {
                   done(null, list[0] || undefined)
                 }
-                else{
+                else {
                   done()
                 }
               }
@@ -185,10 +185,10 @@ module.exports = function (opts) {
                 return done(err)
               }
               seneca.log.debug('remove/one', q, item, desc)
-              if (load){
+              if (load) {
                 done(null, item)
               }
-              else{
+              else {
                 done()
               }
             })
@@ -233,7 +233,8 @@ module.exports = function (opts) {
             }
             done(err)
           })
-          .on('close', function () {})
+          .on('close', function () {
+          })
           .on('end', function () {
             if (--n) {
               throw new Error('ended:' + n)
