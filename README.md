@@ -2,6 +2,8 @@
 > A [Seneca.js][] data storage plugin
 
 # seneca-level-store
+Lead Maintainer: [Blain Smith](https://github.com/blainsmith)
+
 [![Build Status][travis-badge]][travis-url]
 [![Gitter][gitter-badge]][gitter-url]
 
