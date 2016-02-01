@@ -106,7 +106,7 @@ docker build -t level-store --no-cache .
 docker run -i  level-store
 ```
 
-### Native Driver
+## Native Driver
 As with all seneca stores, you can access the native driver, in this case, the `levelup` `db`
 object using `entity.native$(function (err, db) {...})`.
 
