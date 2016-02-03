@@ -12,7 +12,8 @@
     "Cristian Kiss (https://github.com/ckiss)",
     "Wyatt Preul (https://github.com/geek)",
     "Mircea Alexandru (http://www.alexandrumircea.ro)",
-    "Adrien Becchis (https://github.com/AdrieanKhisbe)"
+    "Adrien Becchis (https://github.com/AdrieanKhisbe)",
+    "Blain Smith <rebelgeek@blainsmith.com> (http://blainsmith.com/)"
   ],
   "scripts": {
     "test": "lab -vLc -m 3000",
