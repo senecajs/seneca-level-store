@@ -36,6 +36,9 @@
   "bugs": {
     "url": "https://github.com/senecajs/seneca-level-store/issues"
   },
+  "engines": {
+    "node": ">=0.10.0"
+  },
   "dependencies": {
     "jsonquery-engine": "1.0.2",
     "level": "1.4.0",
