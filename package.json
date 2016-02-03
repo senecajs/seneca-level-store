@@ -7,9 +7,12 @@
   "author": "Richard Rodger (http://richardrodger.com)",
   "contributors": [
     "Dean McDonnell (http://mcdonnelldean.me)",
+    "Dominic Tarr (https://github.com/dominictarr)",
     "Marco Piraccini (https://github.com/marcopiraccini)",
     "Cristian Kiss (https://github.com/ckiss)",
-    "Mircea Alexandru (http://www.alexandrumircea.ro)"
+    "Wyatt Preul (https://github.com/geek)",
+    "Mircea Alexandru (http://www.alexandrumircea.ro)",
+    "Adrien Becchis (https://github.com/AdrieanKhisbe)"
   ],
   "scripts": {
     "test": "lab -vLc -m 3000",
