@@ -13,6 +13,7 @@
   ],
   "scripts": {
     "test": "lab -vLc -m 3000",
+    "lint": "lab -dL",
     "coverage": "lab -r lcov -o coverage/lcov.info -r html -o coverage/index.html",
     "publish-coverage": "cat coverage/lcov.info | coveralls",
     "annotate": "docco level-store.js -o doc"
