@@ -2,10 +2,16 @@
 > A [Seneca.js][] data storage plugin
 
 # seneca-level-store
-Lead Maintainer: [Blain Smith](https://github.com/blainsmith)
 
+[![npm version][npm-badge]][npm-url]
 [![Build Status][travis-badge]][travis-url]
+[![Coverage Status][coverage-badge]][coverage-url]
+[![Code Climate][codeclimate-badge]][codeclimate-url]
+[![Dependency Status][david-badge]][david-url]
 [![Gitter][gitter-badge]][gitter-url]
+
+
+Lead Maintainer: [Blain Smith](https://github.com/blainsmith)
 
 A storage engine that uses [leveldb][] to persist data. It may also be used as an example on how to
 implement a storage plugin for Seneca using an underlying key-value store.
@@ -117,8 +123,17 @@ documentation, examples, extra testing, or new features please get in touch.
 ## License
 Copyright Richard Rodger and other contributors 2015, Licensed under [MIT][].
 
+[npm-badge]: https://img.shields.io/npm/v/seneca-level-store.svg
+[npm-url]: https://npmjs.com/package/seneca-level-store
 [travis-badge]: https://travis-ci.org/senecajs/seneca-level-store.svg
 [travis-url]: https://travis-ci.org/senecajs/seneca-level-store
+[codeclimate-badge]: https://codeclimate.com/github/senecajs/seneca-level-store/badges/gpa.svg
+[codeclimate-url]: https://codeclimate.com/github/senecajs/seneca-level-store
+[coverage-badge]: https://coveralls.io/repos/senecajs/seneca-level-store/badge.svg?branch=master&service=github
+[coverage-url]: https://coveralls.io/github/senecajs/seneca-level-store?branch=master
+[david-badge]: https://david-dm.org/senecajs/seneca-level-store.svg
+[david-url]: https://david-dm.org/senecajs/seneca-level-store
+
 [gitter-badge]: https://badges.gitter.im/Join%20Chat.svg
 [gitter-url]: https://gitter.im/senecajs/seneca
 
