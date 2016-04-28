@@ -16,6 +16,7 @@ var LevelStore = require('..')
 // Shortcuts
 var lab = exports.lab = Lab.script()
 var describe = lab.describe
+var before = lab.before
 var dir = OsEnv.tmpdir() + '/test-seneca-level-store'
 Mkdirp.sync(dir)
 
@@ -28,7 +29,15 @@ var si = Seneca()
 si.use(LevelStore, { folder: dir })
 si.use(LevelStore, incrementConfig)
 
+if (si.version >= '2.0.0') {
+  si.use('entity')
+}
+
 describe('Level Test', function () {
+  before({}, function (done) {
+    si.ready(done)
+  })
+
   Shared.basictest({
     seneca: si,
     script: lab
