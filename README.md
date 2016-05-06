@@ -13,20 +13,19 @@
 
 Lead Maintainer: [Blain Smith](https://github.com/blainsmith)
 
+## Description
+
 A storage engine that uses [leveldb][] to persist data. It may also be used as an example on how to
 implement a storage plugin for Seneca using an underlying key-value store.
 
 - __Version:__ 0.2.3
-- __Tested on:__ Seneca 0.7
-- __Node:__ 0.10, 0.12, 4
-- __License:__ [MIT][]
+- __Node:__ 0.10, 0.12, 4, 5
 
 seneca-level-store's source can be read in an annotated fashion by,
 
 - running `npm run annotate`
-- viewing [online](http://rjrodger.github.io/seneca-level-store/doc/level-store.html).
 
-The annotated source can be found locally at [./doc/level-store.html]().
+The annotated source can be found locally at [./doc/level-store.html](./doc/level-store.html).
 
 If you're using this module, and need help, you can:
 
@@ -37,6 +36,8 @@ If you're using this module, and need help, you can:
 If you are new to Seneca in general, please take a look at [senecajs.org][]. We have everything from
 tutorials to sample apps to help get you up and running quickly.
 
+### Seneca compatibility
+Supports Seneca versions **1.x** and **2.x**
 
 ## Install
 To install, simply use npm. Remember you will need to install [Seneca.js][] if you haven't already.
@@ -44,13 +45,6 @@ To install, simply use npm. Remember you will need to install [Seneca.js][] if y
 ```
 npm install seneca
 npm install seneca-level-store
-```
-
-## Test
-To run tests, simply use npm:
-
-```
-npm run test
 ```
 
 ## Quick Example
@@ -120,8 +114,16 @@ object using `entity.native$(function (err, db) {...})`.
 The [Senecajs org][] encourage open participation. If you feel you can help in any way, be it with
 documentation, examples, extra testing, or new features please get in touch.
 
+## Test
+To run tests, simply use npm:
+
+```
+npm run test
+```
+
 ## License
-Copyright Richard Rodger and other contributors 2015, Licensed under [MIT][].
+Copyright (c) 2010-2016, Richard Rodger and other contributors.
+Licensed under [MIT][].
 
 [npm-badge]: https://img.shields.io/npm/v/seneca-level-store.svg
 [npm-url]: https://npmjs.com/package/seneca-level-store
@@ -133,10 +135,8 @@ Copyright Richard Rodger and other contributors 2015, Licensed under [MIT][].
 [coverage-url]: https://coveralls.io/github/senecajs/seneca-level-store?branch=master
 [david-badge]: https://david-dm.org/senecajs/seneca-level-store.svg
 [david-url]: https://david-dm.org/senecajs/seneca-level-store
-
 [gitter-badge]: https://badges.gitter.im/Join%20Chat.svg
 [gitter-url]: https://gitter.im/senecajs/seneca
-
 [MIT]: ./LICENSE
 [Senecajs org]: https://github.com/senecajs/
 [Seneca.js]: https://www.npmjs.com/package/seneca
