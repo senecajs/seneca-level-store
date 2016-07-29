@@ -16,7 +16,8 @@
     "Blain Smith <rebelgeek@blainsmith.com> (http://blainsmith.com/)"
   ],
   "scripts": {
-    "test": "lab -vLc -m 3000",
+    "test": "lab -vLc -m 3000 $LAB_FLAGS",
+    "test:node6": "LAB_FLAGS='--leaks' && npm test",
     "lint": "lab -dL",
     "coverage": "lab -r lcov -o coverage/lcov.info -r html -o coverage/index.html",
     "publish-coverage": "cat coverage/lcov.info | coveralls",
