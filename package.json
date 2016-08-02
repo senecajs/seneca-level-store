@@ -45,7 +45,7 @@
     "jsonquery-engine": "1.0.2",
     "level": "1.4.0",
     "level-queryengine": "3.0.1",
-    "lodash": "3.10.1",
+    "lodash": "4.6.0",
     "node-uuid": "1.4.7"
   },
   "devDependencies": {
