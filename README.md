@@ -18,7 +18,7 @@ Lead Maintainer: [Blain Smith](https://github.com/blainsmith)
 A storage engine that uses [leveldb][] to persist data. It may also be used as an example on how to
 implement a storage plugin for Seneca using an underlying key-value store.
 
-- __Version:__ 0.2.3
+- __Version:__ 0.3.0
 - __Node:__ 0.10, 0.12, 4, 5
 
 seneca-level-store's source can be read in an annotated fashion by,
@@ -37,7 +37,7 @@ If you are new to Seneca in general, please take a look at [senecajs.org][]. We 
 tutorials to sample apps to help get you up and running quickly.
 
 ### Seneca compatibility
-Supports Seneca versions **1.x** and **2.x**
+Supports Seneca versions **1.x**, **2.x** and **3.x**
 
 ## Install
 To install, simply use npm. Remember you will need to install [Seneca.js][] if you haven't already.
