@@ -1,7 +1,3 @@
-/* Copyright (c) 2013 Richard Rodger, MIT License */
-
-/* jslint node: true */
-
 'use strict'
 
 var _ = require('lodash')
@@ -29,8 +25,11 @@ var si = Seneca()
 si.use(LevelStore, { folder: dir })
 si.use(LevelStore, incrementConfig)
 
+if (si.version >= '3.0.0') {
+  si.use(require('seneca-basic'))
+}
 if (si.version >= '2.0.0') {
-  si.use('entity')
+  si.use(require('seneca-entity'))
 }
 
 describe('Level Test', function () {
