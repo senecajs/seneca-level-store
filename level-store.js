@@ -212,8 +212,8 @@ module.exports = function (opts) {
           limit$: q.limit$,
           skip$: q.skip$,
           fields$: q.fields$,
-          load$: q.load$,// these are from remove action but in some cases (missing id) list is called
-          all$: q.all$// these are from remove action but in some cases (missing id) list is called
+          load$: q.load$, // these are from remove action but in some cases (missing id) list is called
+          all$: q.all$ // these are from remove action but in some cases (missing id) list is called
         }
         // Remove the optional params from the query
         q = _.omit(q, ['sort$', 'limit$', 'skip$', 'fields$', 'load$', 'all$'])
