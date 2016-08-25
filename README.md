@@ -137,7 +137,7 @@ Licensed under [MIT][].
 [david-url]: https://david-dm.org/senecajs/seneca-level-store
 [gitter-badge]: https://badges.gitter.im/Join%20Chat.svg
 [gitter-url]: https://gitter.im/senecajs/seneca
-[MIT]: ./LICENSE
+[MIT]: ./LICENSE.txt
 [Senecajs org]: https://github.com/senecajs/
 [Seneca.js]: https://www.npmjs.com/package/seneca
 [senecajs.org]: http://senecajs.org/

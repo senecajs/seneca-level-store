@@ -19,6 +19,6 @@ before_script:
 
 after_script:
   - npm run lint
-  - mkdir -p coverage
+  - mkdir -p docs/coverage
   - npm run coverage
   - npm run publish-coverage
