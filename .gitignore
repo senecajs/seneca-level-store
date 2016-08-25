@@ -17,5 +17,6 @@ npm-debug.log
 .DS_Store
 test/db
 test/mydb
+docs/annotated
 
 node_modules
