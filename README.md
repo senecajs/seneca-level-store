@@ -19,7 +19,7 @@ A storage engine that uses [leveldb][] to persist data. It may also be used as a
 implement a storage plugin for Seneca using an underlying key-value store.
 
 - __Version:__ 0.3.0
-- __Node:__ 0.10, 0.12, 4, 5
+- __Node:__ 4, 6
 
 seneca-level-store's source can be read in an annotated fashion by,
 
@@ -137,7 +137,7 @@ Licensed under [MIT][].
 [david-url]: https://david-dm.org/senecajs/seneca-level-store
 [gitter-badge]: https://badges.gitter.im/Join%20Chat.svg
 [gitter-url]: https://gitter.im/senecajs/seneca
-[MIT]: ./LICENSE.txt
+[MIT]: ./LICENSE
 [Senecajs org]: https://github.com/senecajs/
 [Seneca.js]: https://www.npmjs.com/package/seneca
 [senecajs.org]: http://senecajs.org/
