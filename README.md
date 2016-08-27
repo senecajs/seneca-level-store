@@ -18,9 +18,6 @@ Lead Maintainer: [Blain Smith](https://github.com/blainsmith)
 A storage engine that uses [leveldb][] to persist data. It may also be used as an example on how to
 implement a storage plugin for Seneca using an underlying key-value store.
 
-- __Version:__ 0.3.0
-- __Node:__ 4, 6
-
 seneca-level-store's source can be read in an annotated fashion by,
 
 - running `npm run annotate`
