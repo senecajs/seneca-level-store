@@ -48,7 +48,9 @@ npm install seneca-level-store
 
 ```js
 var seneca = require('seneca')()
-seneca.use('level-store', {
+seneca.use('basic')
+.use('entity')
+.use('level-store', {
   folder: 'db'
 })
 
