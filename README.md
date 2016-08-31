@@ -51,6 +51,8 @@ var seneca = require('seneca')()
 seneca.use('level-store', {
   folder: 'db'
 })
+.use('entity')
+.use('basic')
 
 seneca.ready(function() {
   var apple = seneca.make$('fruit')
