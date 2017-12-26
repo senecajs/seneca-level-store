@@ -26,7 +26,8 @@
     "lint": "lab -dL",
     "coverage": "lab -v -P test -L -t 30 -r html > docs/coverage.html",
     "coveralls": "lab -s -P test -r lcov | coveralls",
-    "annotate": "docco level-store.js -o docs/annotated"
+    "annotate": "docco level-store.js -o docs/annotated",
+    "prettier": "prettier --write --no-semi --single-quote level-store.js test/*.js"
   },
   "keywords": [
     "seneca",
@@ -63,7 +64,8 @@
     "mkdirp": "0.5.1",
     "osenv": "0.1.3",
     "pre-commit": "1.1.x",
-    "seneca": "plugin",
+    "prettier": "^1.9.2",
+    "seneca": "^3.4.3",
     "seneca-basic": "0.5.x",
     "seneca-entity": "1.3.x",
     "seneca-store-test": "1.0.0"
