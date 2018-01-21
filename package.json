@@ -74,8 +74,5 @@
     "README.md",
     "LICENSE",
     "level-store.js"
-  ],
-  "pre-commit": [
-    "test"
   ]
 }
