@@ -1,7 +1,7 @@
 ![Seneca](http://senecajs.org/files/assets/seneca-logo.png)
-> A [Seneca.js][] data storage plugin
+> A [Seneca.js][] data storage plugin.
 
-# seneca-level-store
+# @seneca/level-store
 
 [![npm version][npm-badge]][npm-url]
 [![Build Status][travis-badge]][travis-url]
@@ -42,6 +42,7 @@ Supports Seneca versions **1.x**, **2.x** and **3.x**
 All Seneca data store supported functionality is implemented in [seneca-store-test](https://github.com/senecajs/seneca-store-test) as a test suite. The tests represent the store functionality specifications.
 
 ## Install
+
 To install, simply use npm. Remember you will need to install [Seneca.js][] if you haven't already.
 
 ```
@@ -69,7 +70,24 @@ seneca.ready(function() {
 })
 ```
 
-## Usage
+## More Examples
+
+See [test/](test/) for usage examples.
+
+## Motivation
+
+A storage engine that uses [leveldb][] to persist data.
+
+## Support
+
+If you're using this module and need help, you can:
+
+- Post a [github issue][]
+- Tweet to [@senecajs][]
+- Ask on the [Gitter][gitter-url]
+
+## API
+
 You don't use this module directly. It provides an underlying data storage engine for the Seneca entity API:
 
 ```js
@@ -83,52 +101,49 @@ entity.list$({property: ... }, function (err, entity) { ... })
 entity.remove$({id: ... }, function (err, entity) { ... })
 ```
 
+
 ### Query Support
-The standard Seneca query format is supported:
 
 - `.list$({f1:v1, f2:v2, ...})` implies pseudo-query `f1==v1 AND f2==v2, ...`.
-
 - `.list$({f1:v1,...}, {sort$:{field1:1}})` means sort by f1, ascending.
-
 - `.list$({f1:v1,...}, {sort$:{field1:-1}})` means sort by f1, descending.
-
 - `.list$({f1:v1,...}, {limit$:10})` means only return 10 results.
-
 - `.list$({f1:v1,...}, {skip$:5})` means skip the first 5.
-
 - `.list$({f1:v1,...}, {fields$:['fd1','f2']})` means only return the listed fields.
 
-Note: you can use `sort$`, `limit$`, `skip$` and `fields$` together.
+### Native Driver
 
-
-## Testing with Docker
-
-With docker installed run the following commands:
-
-```
-docker build -t level-store --no-cache .
-docker run -i  level-store
-```
-
-## Native Driver
-As with all seneca stores, you can access the native driver, in this case, the `levelup` `db`
-object using `entity.native$(function (err, db) {...})`.
+Access the native driver using `entity.native$(function (err, db) {})`.
 
 ## Contributing
+
 The [Senecajs org][] encourage open participation. If you feel you can help in any way, be it with
 documentation, examples, extra testing, or new features please get in touch.
 
-## Test
-To run tests, simply use npm:
 
-```
+### Running tests
+
+```sh
 npm run test
 ```
 
-## License
-Copyright (c) 2010-2016, Richard Rodger and other contributors.
-Licensed under [MIT][].
+### Testing with Docker
 
+```sh
+docker build -t level-store --no-cache .
+docker run -i level-store
+```
+
+## Background
+
+This plugin uses the [leveldb][] storage engine.
+
+[![npm version][npm-badge]][npm-url]
+[![Build Status][travis-badge]][travis-url]
+[![Coverage Status][coverage-badge]][coverage-url]
+[![Code Climate][codeclimate-badge]][codeclimate-url]
+[![Dependency Status][david-badge]][david-url]
+[![Gitter][gitter-badge]][gitter-url]
 [npm-badge]: https://img.shields.io/npm/v/seneca-level-store.svg
 [npm-url]: https://npmjs.com/package/seneca-level-store
 [travis-badge]: https://travis-ci.org/senecajs/seneca-level-store.svg

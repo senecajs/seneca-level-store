@@ -1,5 +1,5 @@
 {
-  "name": "seneca-level-store",
+  "name": "@seneca/level-store",
   "version": "0.3.1",
   "description": "Seneca leveldb store",
   "main": "level-store.js",
