@@ -1,51 +1,20 @@
 ![Seneca](http://senecajs.org/files/assets/seneca-logo.png)
-> A [Seneca.js][] data storage plugin.
+> A [Seneca.js](http://senecajs.org) plugin
 
-# @seneca/level-store
+# seneca-level-store
 
-[![npm version][npm-badge]][npm-url]
-[![Build Status][travis-badge]][travis-url]
-[![Coverage Status][coverage-badge]][coverage-url]
-[![Code Climate][codeclimate-badge]][codeclimate-url]
-[![Dependency Status][david-badge]][david-url]
-[![Gitter][gitter-badge]][gitter-url]
+[![npm version](https://img.shields.io/npm/v/seneca-level-store.svg)](https://npmjs.com/package/seneca-level-store)
+[![build](https://github.com/senecajs/seneca-level-store/actions/workflows/build.yml/badge.svg)](https://github.com/senecajs/seneca-level-store/actions/workflows/build.yml)
+[![Known Vulnerabilities](https://snyk.io/test/github/senecajs/seneca-level-store/badge.svg)](https://snyk.io/test/github/senecajs/seneca-level-store)
 
 | ![Voxgig](https://www.voxgig.com/res/img/vgt01r.png) | This open source module is sponsored and supported by [Voxgig](https://www.voxgig.com). |
 |---|---|
 
-Lead Maintainer: [Blain Smith](https://github.com/blainsmith)
-
-## Description
-
-A storage engine that uses [leveldb][] to persist data. It may also be used as an example on how to
-implement a storage plugin for Seneca using an underlying key-value store.
-
-seneca-level-store's source can be read in an annotated fashion by,
-
-- running `npm run annotate`
-
-The annotated source can be found locally at [./doc/level-store.html](./doc/level-store.html).
-
-If you're using this module, and need help, you can:
-
-- Post a [github issue][],
-- Tweet to [@senecajs][],
-- Ask on the [Gitter][gitter-url].
-
-If you are new to Seneca in general, please take a look at [senecajs.org][]. We have everything from
-tutorials to sample apps to help get you up and running quickly.
-
-### Seneca compatibility
-Supports Seneca versions **1.x**, **2.x** and **3.x**
-
-### Supported functionality
-All Seneca data store supported functionality is implemented in [seneca-store-test](https://github.com/senecajs/seneca-store-test) as a test suite. The tests represent the store functionality specifications.
+A [Seneca.js](http://senecajs.org) entity store using [LevelDB](http://leveldb.org/).
 
 ## Install
 
-To install, simply use npm. Remember you will need to install [Seneca.js][] if you haven't already.
-
-```
+```sh
 npm install seneca
 npm install seneca-level-store
 ```
@@ -70,21 +39,28 @@ seneca.ready(function() {
 })
 ```
 
+To run tests with Docker:
+
+```sh
+docker build -t level-store --no-cache .
+docker run -i level-store
+```
+
 ## More Examples
 
-See [test/](test/) for usage examples.
+See [test/](test/) for more usage examples.
 
 ## Motivation
 
-A storage engine that uses [leveldb][] to persist data.
+A storage engine that uses [LevelDB](http://leveldb.org/) to persist data. It can also be used as an example of how to implement a Seneca storage plugin using an underlying key-value store.
 
 ## Support
 
 If you're using this module and need help, you can:
 
-- Post a [github issue][]
-- Tweet to [@senecajs][]
-- Ask on the [Gitter][gitter-url]
+- Post a [github issue](https://github.com/senecajs/seneca-level-store/issues)
+- Tweet to [@senecajs](http://twitter.com/senecajs)
+- Ask on the [Gitter](https://gitter.im/senecajs/seneca)
 
 ## API
 
@@ -101,7 +77,6 @@ entity.list$({property: ... }, function (err, entity) { ... })
 entity.remove$({id: ... }, function (err, entity) { ... })
 ```
 
-
 ### Query Support
 
 - `.list$({f1:v1, f2:v2, ...})` implies pseudo-query `f1==v1 AND f2==v2, ...`.
@@ -117,50 +92,10 @@ Access the native driver using `entity.native$(function (err, db) {})`.
 
 ## Contributing
 
-The [Senecajs org][] encourage open participation. If you feel you can help in any way, be it with
-documentation, examples, extra testing, or new features please get in touch.
-
-
-### Running tests
-
-```sh
-npm run test
-```
-
-### Testing with Docker
-
-```sh
-docker build -t level-store --no-cache .
-docker run -i level-store
-```
+The [Senecajs org](https://github.com/senecajs/) encourages open participation. If you feel you can help in any way, be it with documentation, examples, extra testing, or new features please get in touch.
 
 ## Background
 
-This plugin uses the [leveldb][] storage engine.
+This plugin uses the [LevelDB](http://leveldb.org/) storage engine. Supports Seneca versions **1.x**, **2.x** and **3.x**.
 
-[![npm version][npm-badge]][npm-url]
-[![Build Status][travis-badge]][travis-url]
-[![Coverage Status][coverage-badge]][coverage-url]
-[![Code Climate][codeclimate-badge]][codeclimate-url]
-[![Dependency Status][david-badge]][david-url]
-[![Gitter][gitter-badge]][gitter-url]
-[npm-badge]: https://img.shields.io/npm/v/seneca-level-store.svg
-[npm-url]: https://npmjs.com/package/seneca-level-store
-[travis-badge]: https://travis-ci.org/senecajs/seneca-level-store.svg
-[travis-url]: https://travis-ci.org/senecajs/seneca-level-store
-[codeclimate-badge]: https://codeclimate.com/github/senecajs/seneca-level-store/badges/gpa.svg
-[codeclimate-url]: https://codeclimate.com/github/senecajs/seneca-level-store
-[coverage-badge]: https://coveralls.io/repos/senecajs/seneca-level-store/badge.svg?branch=master&service=github
-[coverage-url]: https://coveralls.io/github/senecajs/seneca-level-store?branch=master
-[david-badge]: https://david-dm.org/senecajs/seneca-level-store.svg
-[david-url]: https://david-dm.org/senecajs/seneca-level-store
-[gitter-badge]: https://badges.gitter.im/Join%20Chat.svg
-[gitter-url]: https://gitter.im/senecajs/seneca
-[MIT]: ./LICENSE
-[Senecajs org]: https://github.com/senecajs/
-[Seneca.js]: https://www.npmjs.com/package/seneca
-[senecajs.org]: http://senecajs.org/
-[leveldb]: http://leveldb.org/
-[node-leveldb-native]: http://leveldb.github.com/node-leveldb-native/markdown-docs/queries.html
-[github issue]: https://github.com/rjrodger/seneca-level-store/issues
-[@senecajs]: http://twitter.com/senecajs
+All Seneca data store supported functionality is implemented in [seneca-store-test](https://github.com/senecajs/seneca-store-test) as a test suite. The tests represent the store functionality specifications.
